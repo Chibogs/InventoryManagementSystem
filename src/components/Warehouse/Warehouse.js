@@ -72,7 +72,7 @@ const Warehouse = () => {
   }
 
   async function handleDelete(id) {
-    if (!confirm('Delete this item?')) return;
+    if (!window.confirm('Delete this item?')) return;
     setLoading(true);
     const { error } = await deleteItem(id);
     if (error) setError(error.message || JSON.stringify(error));
