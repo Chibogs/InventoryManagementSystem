@@ -1,29 +1,32 @@
 import React from "react";
 
 const Reports = () => (
-  <div style={{ padding: '16px' }}>
-    <h1 style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '16px' }}>Reports</h1>
-    <table style={{ minWidth: '100%', backgroundColor: 'white', boxShadow: '0 2px 4px rgba(0,0,0,0.1)', borderRadius: '8px' }}>
-      <thead>
-        <tr>
-          <th style={{ padding: '8px 16px', borderBottom: '1px solid #e5e7eb' }}>Report ID</th>
-          <th style={{ padding: '8px 16px', borderBottom: '1px solid #e5e7eb' }}>Type</th>
-          <th style={{ padding: '8px 16px', borderBottom: '1px solid #e5e7eb' }}>Date</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td style={{ padding: '8px 16px', borderBottom: '1px solid #e5e7eb' }}>R001</td>
-          <td style={{ padding: '8px 16px', borderBottom: '1px solid #e5e7eb' }}>Sales</td>
-          <td style={{ padding: '8px 16px', borderBottom: '1px solid #e5e7eb' }}>2025-09-12</td>
-        </tr>
-        <tr>
-          <td style={{ padding: '8px 16px', borderBottom: '1px solid #e5e7eb' }}>R002</td>
-          <td style={{ padding: '8px 16px', borderBottom: '1px solid #e5e7eb' }}>Inventory</td>
-          <td style={{ padding: '8px 16px', borderBottom: '1px solid #e5e7eb' }}>2025-09-11</td>
-        </tr>
-      </tbody>
-    </table>
+  <div className="p-6">
+    <h1 className="text-2xl font-bold mb-6">Reports</h1>
+    <div className="bg-white shadow-sm rounded-lg border border-gray-200">
+      <div className="px-6 py-4 border-b border-gray-200">
+        <h3 className="text-lg font-semibold">Generated Reports</h3>
+      </div>
+      <div className="p-6">
+        <table className="min-w-full">
+          <thead>
+            <tr>
+              <th className="px-6 py-3 border-b border-gray-200 text-left text-sm font-medium text-gray-700">Report ID</th>
+              <th className="px-6 py-3 border-b border-gray-200 text-left text-sm font-medium text-gray-700">Type</th>
+              <th className="px-6 py-3 border-b border-gray-200 text-left text-sm font-medium text-gray-700">Date</th>
+              <th className="px-6 py-3 border-b border-gray-200 text-left text-sm font-medium text-gray-700">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td className="px-6 py-4 text-center text-gray-500" colSpan="4">
+                No reports available
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
 );
 

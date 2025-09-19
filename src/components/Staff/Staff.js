@@ -1,14 +1,28 @@
 import React from "react";
 
 const Staff = () => (
-  <div style={{ padding: '16px' }}>
-    <h1 style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '16px' }}>Staff Assignment</h1>
-    <form style={{ backgroundColor: 'white', boxShadow: '0 2px 4px rgba(0,0,0,0.1)', borderRadius: '8px', padding: '16px', maxWidth: '400px', margin: '0 auto' }}>
-      <label style={{ display: 'block', marginBottom: '8px', fontWeight: '600' }}>Assign Item to Customer</label>
-      <input type="text" placeholder="Customer Name" style={{ border: '1px solid #d1d5db', padding: '8px', width: '100%', marginBottom: '8px', borderRadius: '4px' }} />
-      <input type="text" placeholder="Item Name" style={{ border: '1px solid #d1d5db', padding: '8px', width: '100%', marginBottom: '8px', borderRadius: '4px' }} />
-      <button type="submit" style={{ backgroundColor: '#2563eb', color: 'white', padding: '8px 16px', borderRadius: '4px', border: 'none', cursor: 'pointer' }}>Assign</button>
-    </form>
+  <div className="p-6">
+    <h1 className="text-2xl font-bold mb-6">Staff Management</h1>
+    <div className="bg-white shadow-sm rounded-lg border border-gray-200 max-w-2xl mx-auto">
+      <div className="px-6 py-4 border-b border-gray-200">
+        <h3 className="text-lg font-semibold">Staff Assignment</h3>
+      </div>
+      <div className="p-6">
+        <form className="space-y-4">
+          <div>
+            <label className="block text-sm font-medium text-gray-700">Staff Name</label>
+            <input type="text" className="mt-1 block w-full rounded-md border-gray-300 shadow-sm" disabled placeholder="Coming soon" />
+          </div>
+          <div>
+            <label className="block text-sm font-medium text-gray-700">Assignment</label>
+            <input type="text" className="mt-1 block w-full rounded-md border-gray-300 shadow-sm" disabled placeholder="Coming soon" />
+          </div>
+          <button type="submit" className="bg-blue-600 text-white px-4 py-2 rounded-md" disabled>
+            Assign (Coming Soon)
+          </button>
+        </form>
+      </div>
+    </div>
   </div>
 );
 
