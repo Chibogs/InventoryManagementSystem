@@ -7,6 +7,7 @@ export async function registerUser(name, email, password) {
   const { data, error } = await supabase
     .from("users")
     .insert([{ name, email, password: hashedPassword }]);
+
   if (error) throw error;
   return data;
 }
@@ -20,7 +21,9 @@ export async function loginUser(email, password) {
     .single();
 
   if (error) throw error;
+
   const valid = await bcrypt.compare(password, data.password);
   if (!valid) throw new Error("Invalid credentials");
+
   return data;
 }
